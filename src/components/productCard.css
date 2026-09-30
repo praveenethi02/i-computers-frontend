@@ -1,0 +1,13 @@
+.productCard {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 16px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+.bg-red{
+    background-color: red;
+}
+.text-white{
+    color: white;
+}
