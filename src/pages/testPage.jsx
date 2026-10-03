@@ -1,4 +1,5 @@
 import {useState } from "react"
+import toast from "react-hot-toast"
 
 export default function TestPage(){
 
@@ -12,17 +13,17 @@ export default function TestPage(){
             <div className="w-75 h-[50px] flex justify-center items-center">
                 <button onClick={
                     () => {setStatus("On")
-                    alert("Turned on")
+                    toast.success("Turned on")
                     }
                     } className="p-2 text-white m-2 bg-green-500 hover:bg-green-600">Turn on</button>
                 <button onClick={
                     () => {setStatus("Off")
-                    alert("Turned off")
+                    toast.error("Turned off")
                     }
                     } className="p-2 text-white m-2 bg-red-500 hover:bg-red-600">Turn off</button>
                 <button onClick={
                     () => {setStatus("Idle")
-                    alert("Idle")}
+                    toast.success("Idle")}
                     } className="p-2 text-white m-2 bg-yellow-600 hover:bg-yellow-600">Idle</button>
             </div>
             <h1 className="text-3xl font-bold">{level}</h1>
