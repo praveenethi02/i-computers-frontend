@@ -20,13 +20,14 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import api from "../lib/api";
 
 export default function LoginPage(){
 
     const [email , setEmail] = useState("")
     const [password , setPassword] = useState("")
+    const navigate = useNavigate()
 
     function handleLogin(){
 
@@ -46,11 +47,20 @@ export default function LoginPage(){
             (res)=>{
 
                 toast.success("Login successful")
-                console.log(res.data.token)
-                console.log(res.data.isAdmin)
+                
 
                 //browser store
-                localStorage.setItem("token" , res.data.token)              
+                localStorage.setItem("token" , res.data.token)   
+                
+                if(res.data.isAdmin){
+                    //admin dashboard
+                    //window.location.href = "/admin"
+                    navigate("/admin")
+                }else{
+                    //homepage
+                    //window.location.href = "/"
+                    navigate("/")
+                }              
 
 
             }
@@ -78,6 +88,7 @@ export default function LoginPage(){
 
                 <input
 
+                value={email}
                 onChange={
                     (e)=>{
                         
@@ -91,7 +102,8 @@ export default function LoginPage(){
 
                 <label className="w-full mt-5 text-lg text-secondary font-semibold">Password</label>
                 <input
-
+                
+                value={password}
                 onChange={
 
                     (e)=>{
