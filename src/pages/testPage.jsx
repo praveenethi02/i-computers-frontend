@@ -55,6 +55,9 @@ export default function TestPage(){
 
 }
 
+//my - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXV CJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFjemt2aHNsenl3dW9teXVmb3JoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE3MjUxNTYsImV4cCI6MjEwNzMwMTE1Nn0.s69vc02utoarFaD3NabfwVq_pVjTGLJqRXGs3YqRtY8
+//https://qczkvhslzywuomyuforh.supabase.co
+
 //eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imlpc3lmcXBzcmh5eXhoYW5xa2tsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE0NDE4MjUsImV4cCI6MjA5NzAxNzgyNX0.sagKhV72cFOwxElLB56dehDDFfUQXGxGvGIqlxyOia0
 //https://iisyfqpsrhyyxhanqkkl.supabase.co
 
