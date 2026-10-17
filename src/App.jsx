@@ -10,7 +10,7 @@ import { Toaster } from 'react-hot-toast';
 function App() {
 
   return (
-    <div className='w-full h-screen'>
+    <div className='w-full h-screen '>
       <Toaster position='top-right' />
       <Routes>
         <Route path='/' element={<HomePage />} />
