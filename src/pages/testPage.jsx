@@ -1,59 +1,69 @@
-import { useState } from "react"
-
-import toast from "react-hot-toast"
-import uploadMedia from "../lib/uploadMedia"
-
-
+import LoadingAnimation from "../components/loadingAnimation";
 
 
 
 export default function TestPage(){
 
-    const [file , setFile] = useState(null)
-
-    function uploadFile(){
-
-        uploadMedia(file).then(
-            (res)=>{
-                console.log(res)
-            }
-        ).catch(
-            (err)=>{
-                console.log(err)
-                toast.error("Upload failed")
-            }
-        )
-
-    }
-
-    // async function uploadFileAsync(){
-    //     try{
-    //         const fileUrl = await uploadMedia(file)
-    //         console.log(fileUrl)
-    //     }
-    //     catch(err){
-    //         console.log(err)
-    //         toast.error("Upload failed")
-    //     }
-    // }
-
     return(
-        <div className="w-full h-full flex items-center justify-center">
-
-            <input type="file"
-            
-            onChange={
-                (e)=>{
-                    setFile(e.target.files[0])
-                }
-                
-            }/>
-
-            <button onClick={uploadFile} className="bg-green-600 text-white p-2 rounded-lg">Submit</button>
+        <div className="w-[300px] h-[300px]">
+            <LoadingAnimation />
         </div>
     )
-
+    
 }
+
+
+// import { useState } from "react"
+
+// import toast from "react-hot-toast"
+// import uploadMedia from "../lib/uploadMedia"
+// export default function TestPage(){
+
+//     const [file , setFile] = useState(null)
+
+//     function uploadFile(){
+
+//         uploadMedia(file).then(
+//             (res)=>{
+//                 console.log(res)
+//             }
+//         ).catch(
+//             (err)=>{
+//                 console.log(err)
+//                 toast.error("Upload failed")
+//             }
+//         )
+
+//     }
+
+//     // async function uploadFileAsync(){
+//     //     try{
+//     //         const fileUrl = await uploadMedia(file)
+//     //         console.log(fileUrl)
+//     //     }
+//     //     catch(err){
+//     //         console.log(err)
+//     //         toast.error("Upload failed")
+//     //     }
+//     // }
+
+//     return(
+//         <div className="w-full h-full flex items-center justify-center">
+
+//             <input type="file"
+
+//             onChange={
+//                 (e)=>{
+//                     setFile(e.target.files[0])
+//                 }
+
+//             }/>
+
+//             <button onClick={uploadFile} className="bg-green-600 text-white p-2 rounded-lg">Submit</button>
+//         </div>
+//     )
+
+// }
 
 //my - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXV CJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFjemt2aHNsenl3dW9teXVmb3JoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE3MjUxNTYsImV4cCI6MjEwNzMwMTE1Nn0.s69vc02utoarFaD3NabfwVq_pVjTGLJqRXGs3YqRtY8
 //https://qczkvhslzywuomyuforh.supabase.co
