@@ -91,7 +91,7 @@ export default function AddProductForm(){
 
     return(
         <div className="w-full max-h-full  flex flex-wrap p-4 items-start gap-0 overflow-y-scroll">
-            
+
             {loading && <LoadingAnimation />}
 
             <div className="w-full h-[100px] bg-white shadow-md rounded-md flex items-center p-4 justify-between mb-8">
@@ -102,7 +102,8 @@ export default function AddProductForm(){
                     <button className="p-2 bg-green-600 text-white rounded-md cursor-pointer hover:bg-green-700" onClick={handleSave}>
                         Save
                     </button>
-                </div>  
+                </div>
+               
             </div>
             <div className="w-[15%] flex flex-col h-[100px] p-2">
                 <label className="text-secondary text-lg font-semibold mb-2">Product ID</label>
@@ -113,7 +114,7 @@ export default function AddProductForm(){
                 <input type="text" value={name} onChange={(e)=>setName(e.target.value)} className="w-full h-[40px] rounded-md border-2 border-gray-300 p-2 mb-4" />
             </div>
             <div className="w-[45%] flex flex-col h-[100px]  p-2 ">
-                <label className="text-secondary text-lg font-semibold mb-2 flex items-center gap-2 ">Alternative Names <span className="flex justify-center items-center  h-full italic font-thin"><CiCircleInfo /> (Comma-separated)</span></label>
+                <label className="text-secondary text-lg font-semibold mb-2 flex items-center gap-2 ">Alternative Names <div className="flex justify-center items-center  h-full italic font-thin tooltip"><CiCircleInfo /> <div className="tooltip-text">Comma-separated</div></div></label>
                 <input type="text" value={altNames} onChange={(e)=>setAltNames(e.target.value)} className="w-full h-[40px] rounded-md border-2 border-gray-300 p-2 mb-4" />
             </div>
             <div className="w-full flex flex-col p-2">
